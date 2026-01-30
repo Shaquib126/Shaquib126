@@ -1,0 +1,76 @@
+      {/* Gallery Section */}
+      <section className="gallery" id="projects">
+        <h2>Our Recent Projects</h2>
+        <div className="gallery-grid">
+          <div className="gallery-item">
+            <img src="https://images.unsplash.com/photo-1508919892410-09351052219d?q=80&w=2000" alt="Façade Work" />
+            <div className="overlay"><h4>Commercial Facade</h4></div>
+          </div>
+          <div className="gallery-item">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069" alt="Office Partition" />
+            <div className="overlay"><h4>Office Interior</h4></div>
+          </div>
+          <div className="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" alt="Residential Glass" />
+            <div className="overlay"><h4>Residential Glazing</h4></div>
+          </div>
+          <div className="gallery-item">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070" alt="Glass Railing" />
+            <div className="overlay"><h4>Safety Glass</h4></div>
+          </div>
+        </div>
+      </section>
+css code 
+/* Gallery Styles */
+.gallery {
+  padding: 60px 10%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 250px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 152, 219, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+  bottom: 0;
+}
